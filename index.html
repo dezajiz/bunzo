@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <div class="logobutton"><button type="button" onclick="document.getElementById('dialog_ex1').showModal()"><img src="./gazo/logo_bunzo_tate.gif" alt="分増"></button></div>
+
+    <dialog class="modal" id="dialog_ex1" aria-labelledby="dialog_ex1_h">
+        <div class="contents">
+        <div class="list">
+        <h3 id="dialog_ex1_h">HOME</h3>
+        <ul>
+            <li><a href="">コーン</a></li>
+            <li><a href="">ハンガー</a></li>
+            <li><a href="">三角コーナー</a></li>
+            <li><a href="">コップ</a></li>
+            <li><a href="">ヘアブラシ</a></li>
+            <li><a href="">しゃもじ</a></li>
+            <li><a href="">カクテルグラス</a></li>
+            <li><a href="">ワイングラス</a></li>
+        </ul>
+        <button class="closebutton" type="button" onclick="this.closest('dialog').close();">×</button>
+        </div>
+        </div>
+        
+    </dialog>
+
+
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+
+</body>
+</html>

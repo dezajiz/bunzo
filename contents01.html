@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 class="title">small bowl</h1>
+
+
+  <button class="humbureger" type="button" onclick="document.getElementById('dialog_ex1').showModal()">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="3" y1="12" x2="21" y2="12"/>
+  <line x1="3" y1="6" x2="21" y2="6"/>
+  <line x1="3" y1="18" x2="21" y2="18"/>
+</svg>
+</button>
+
+<dialog class="modal" id="dialog_ex1" aria-labelledby="dialog_ex1_h">
+  <div class="contents">
+  <div class="list">
+  <ul>
+      <li><a href="contents01.html">小鉢</a></li>
+      <li><a href="contents02.html">ハンガー</a></li>
+      <li><a href="contents03.html">ドレッシングボトル</a></li>
+      <li><a href="">くし</a></li>
+      <li><a href="">バケツ</a></li>
+      <li><a href="">ヘアブラシ</a></li>
+      <li><a href="">ひしゃく</a></li>
+  </ul>
+  <button class="closebutton" type="button" onclick="this.closest('dialog').close();">
+    <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" width="50px" height="50px" viewBox="0 0 50 50"  xml:space="preserve">
+ <g>
+   <path fill="none" stroke="#727171" stroke-width="0.5" stroke-miterlimit="10" d="M42.51,31.643
+     c0,6.002-4.863,10.867-10.867,10.867H18.359c-6.001,0-10.869-4.865-10.869-10.867V18.358c0-6.003,4.868-10.868,10.869-10.868
+     h13.284c6.004,0,10.867,4.865,10.867,10.868V31.643z"/>
+   <g>
+     <line fill="none" stroke="#B5B5B6" stroke-width="0.5" stroke-miterlimit="10" x1="17.605" y1="16.699" x2="32.398" y2="31.49"/>
+     <line fill="none" stroke="#B5B5B6" stroke-width="0.5" stroke-miterlimit="10" x1="31.492" y1="17.604" x2="16.701" y2="32.396"/>
+   </g>
+ </g>
+ </svg>
+</button>
+  </div>
+  </div>
+  
+</dialog>
+
+    <div class="container">
+        <div id="container01" class="container01">
+          <img class="gazotate" src="gazo/smallbowl01_kata_centor5px_tate.png">
+          <a href="#container02" class="sita"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" width="65px" height="65px" viewBox="0 0 65 65" enable-background="new 0 0 65 65" xml:space="preserve">
+         <g>
+           <g>
+             <line fill="none" stroke="#595757" stroke-width="0.5" stroke-miterlimit="10" x1="22.027" y1="28.25" x2="33.424" y2="39.646"/>
+             <line fill="none" stroke="#595757" stroke-width="0.5" stroke-miterlimit="10" x1="44.306" y1="28.25" x2="32.909" y2="39.646"/>
+           </g>
+           <circle fill="none" stroke="#595757" stroke-width="0.5" stroke-miterlimit="10" cx="33.167" cy="33.168" r="29.833"/>
+         </g>
+         </svg></a>
+        </div>
+        <div id="container02" class="container02">
+          <img class="gazoyoko" src="gazo/smallbowl01_kata_centor5px.png">
+          <a href="#container01" class="ue"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" width="65px" height="65px" viewBox="0 0 65 65" enable-background="new 0 0 65 65" xml:space="preserve">
+         <g>
+           <g>
+             <line fill="none" stroke="#595757" stroke-width="0.5" stroke-miterlimit="10" x1="22.027" y1="28.25" x2="33.424" y2="39.646"/>
+             <line fill="none" stroke="#595757" stroke-width="0.5" stroke-miterlimit="10" x1="44.306" y1="28.25" x2="32.909" y2="39.646"/>
+           </g>
+           <circle fill="none" stroke="#595757" stroke-width="0.5" stroke-miterlimit="10" cx="33.167" cy="33.168" r="29.833"/>
+         </g>
+         </svg></a>
+        </div>
+    </div>
+</body>
+</html>

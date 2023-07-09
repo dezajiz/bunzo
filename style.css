@@ -1,0 +1,333 @@
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.logobutton {
+    position: fixed; /* 要素の位置を固定する */
+    top: 80px; /* 基準の位置を上端から80px下に指定する */
+    left: 50%; /* 基準の位置を画面の半分の位置に指定する */
+    transform: translateX(-50%);/* ロゴボタンの幅の半分の量を左にずらす */
+}
+
+.logobutton button {
+  background: transparent;
+  /* ロゴボタンの中のボタンの背景を透明にする */
+  border: none;
+  /* ロゴボタンの中のボタンの線消す */
+}
+
+@media screen and (min-width: 767px) {
+    /* ウィンドウの幅が767px以上のときのスタイルを書く（上書き） */
+    .logobutton {
+        top: 150px; /* 基準の位置を画面の上端から150px下に指定する */
+    }
+}
+
+.modal {
+    position: fixed; /* 要素の位置を固定する */
+    top: 0px; /* 基準の位置を上端から0px下に指定する */
+    right: 0px; /* 基準の位置を右端から0pxの位置に指定する */
+    left: auto; /* ダイアログのデフォルト指定の位置を打消し */
+    font-family: 'Shippori Mincho', serif;/* GoogleフォントからShippori Minchoよびだし */
+    border: none;
+    height: 100vh;/* 高さが画面の数字 */
+    max-height: none;/* 高さの上限打消し */
+    width: 400px;
+    max-width: 100%;/* 幅400以下だと100%の数字 */
+    background:none;
+    padding: 10px;
+}
+
+/*  */
+
+.modal .contents{
+    display: flex;
+    justify-content: center;
+    height: 100%;/* 高さ親のサイズに100％あわせる */
+    padding: 40px 40px;
+    background-color: #323131;
+    border-radius: 15px;
+    position: relative;
+}
+
+.modal[open] {
+    animation: show 0.2s ease normal;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.modal ul {
+    display: flex;
+    list-style-type: none;/* リストのスタイル（ドットとか）打消しといて♪ */
+    gap: 50px;/*row-gap: 10px; column-gap: 10px;  */
+    justify-content: center;/* なんかいい感じに真ん中そろえといて♪ */
+    padding: 10px;
+    font-size: 11px;
+    flex-direction: column;
+}
+
+.modal .list{
+    text-align: center;
+}
+
+.closebutton{
+    position:absolute; 
+    top:0px;
+    left:0px; 
+    font-family: "Noto Sans JP";
+    border: none;
+    padding: 5px 7px 5px 7px;
+    font-size: 14px;
+    background-color:transparent;
+}
+
+.modal a{
+    text-decoration:none;
+    color: #c9c6c6;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);/* モーダルの背後の薄黒いやつ*/
+}
+
+section {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    background-image: url("./gazo/1.gif");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/*↓↓★★ここはコンテンツページの共通の体裁★★↓↓*/
+
+.linkbutton_yoko {
+    height: 112px;
+    width: 126px;
+    max-width: 100%;
+    position: fixed; /* 要素の位置を固定する */
+    top: 10px; /* 基準の位置を上端から10px下に指定する */
+    left: 0px; /* 基準の位置を左端から0px右にに指定する */
+}
+.linkbutton_yoko img{
+    max-width: 100%;
+}
+
+
+/*↓↓★★ここはコンテンツページの01体裁★★↓↓*/
+
+body{background-color: #dcdddd;}
+
+.title{
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    color: #646363;
+    z-index: 1; /* 番号高いものを一番上のZ軸上レイヤーに */
+    font-family: 'Shippori Mincho', serif;
+    scale: 1.1 0.7;  /* 変倍 */
+}
+
+
+.humbureger{
+ width: 30px;
+ height: 30px;
+ position: fixed;
+ top: 20px;
+ right: 45px;
+ background: transparent;
+ /* ロゴボタンの中のボタンの背景を透明にする */
+ border: none;
+ /* ロゴボタンの中のボタンの線消す */
+ color: #646363;
+ z-index: 1;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  .container div{
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 10px;
+    display: grid;/* グリッド上にならべたいときの表示 */
+    place-content: center;/* 両方（縦、横）をなんかいい感じに真ん中そろえといて♪ */
+    position: relative;
+  }
+
+.container01 .gazotate{
+    width: 402px;
+    max-width: 100%;
+}
+
+.container01 .sita{
+    width: 50px;
+    max-width: 100%;
+    position:absolute; /* 絶対配置できるようにする */
+    bottom: 30px;
+    right:20px; 
+}
+
+.container01 .sita line{
+    transition:transform 0.3s
+}
+.container01 .sita:hover line{
+    transform:translateY(8px)
+}
+
+.sita svg{
+    width: 100%;
+}
+
+.container02 .gazoyoko{
+    width: 300px;
+    max-width: 100%;
+}
+
+.container02 .ue{
+    width: 50px;
+    max-width: 100%;
+    position:absolute; /* 絶対配置できるようにする */
+    bottom: 30px;
+    right:20px; 
+    rotate: 180deg;
+    translate: 1px 2px;
+    vertical-align: top;
+}
+
+.container02 .ue line{
+    transition:transform 0.3s
+}
+.container02 .ue:hover line{
+    transform:translateY(8px)
+}
+
+.ue svg{
+    width: 100%;
+}
+
+
+
+
+
+/*↓↓★★保留★★↓↓*/
+
+/*↓↓★★ここからコンテンツページの１（一覧）体裁★★↓↓*/
+
+.photolist{
+    margin: 100px 10%;
+}
+
+
+.photolist ul {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 5%;
+}
+
+@media screen and (min-width: 415px) {
+    /* ウィンドウの幅が767px以上のときのスタイルを書く（上書き） */
+    .photolist ul {
+        grid-template-columns: 1fr 1fr; /* カラム数2個のグリッドレイアウト */
+    }
+}
+
+@media screen and (min-width: 767px) {
+    /* ウィンドウの幅が767px以上のときのスタイルを書く（上書き） */
+    .photolist ul {
+        grid-template-columns: 1fr 1fr 1fr; /* カラム数3個のグリッドレイアウト */
+    }
+}
+
+.photolist li{
+    list-style-type: none;/* リストのスタイル（ドットとか）打消しといて♪ */
+    transition: opacity 0.3s 0.3s linear;
+}
+.photolist li.hide {
+    opacity: 0;
+}
+.photolist li img{
+    width: 100%;
+}
+
+
+/*↓↓★★ここからコンテンツページ2のみの体裁★★↓↓*/
+
+
+.photolist2{
+    margin: 100px 10%;
+}
+
+
+.photolist2 ul{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 5%;
+}
+
+@media screen and (min-width: 415px) {
+    /* ウィンドウの幅が767px以上のときのスタイルを書く（上書き） */
+    .photolist2 ul {
+        grid-template-columns: 1fr 1fr; /* カラム数2個のグリッドレイアウト */
+    }
+}
+
+@media screen and (min-width: 767px) {
+    /* ウィンドウの幅が767px以上のときのスタイルを書く（上書き） */
+    .photolist2 ul {
+        grid-template-columns: 1fr 1fr 1fr; /* カラム数3個のグリッドレイアウト */
+    }
+}
+
+
+.photolist2 li{
+    list-style-type: none;/* リストのスタイル（ドットとか）打消しといて♪ */
+}
+.photolist2 li img{
+    width: 100%;
+}
+
+.ViewAll a{
+    color: whitesmoke;
+    background-color: black;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin:auto;
+    padding: 5px;
+    width: 100px;
+    text-decoration:none;
+    font-family: 'Bitter', serif;/* GoogleフォントからBitterよびだし翻訳時serif */
+}
+.arrow1{
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border: 2px solid;
+    border-color: transparent transparent #ffffff #ffffff;/* 上と右が透明で下と左が白 */
+    transform: rotate(-135deg);/* -135度回転 */
+    transition: transform 0.2s ease-out; /* 0.2秒でイーズアウト */
+}
+.ViewAll a:hover .arrow1 {
+    transform:translateX(4px) rotate(-135deg);
+}
+
